@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset = "utf-8">
+
+	<title>Javascript Matching Game Part 1</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="generateFaces()">
+	<header>
+
+		<h1>Matching Game</h1>
+
+		<p>Click on the extra smiling face on the left side.</p>
+
+	</header>
+
+	<main>
+
+		<div id="leftSide" class="gameBoard"></div>
+
+		<div id="rightSide" class="gameBoard"></div>
+
+	</main>
+
+	 <script type="text/javascript">
+
+	 	var numberOfFaces = 5;
+
+	 	var leftSideDiv = document.getElementById("leftSide");
+
+	 	var rightSideDiv = document.getElementById("rightSide");
+
+	 	var imgElement = document.createElement("img");
+
+	 	function generateFaces(){
+
+	 		var xPos, yPos;
+	 		var image;
+
+	 		for (var i=0; i<numberOfFaces; i++)
+	 		{
+		 		image = document.createElement("img");
+
+		 		image.src = "assets/img/smile.png"
+
+	 			xPos = Math.floor(Math.random()*400);
+	 			yPos = Math.floor(Math.random()*400);
+
+	 			image.style.left = xPos+"px";
+	 		 	image.style.top = yPos+"px";
+
+	 			leftSideDiv.appendChild(image);
+
+	 		}
+
+	 		var leftSideImages = leftSideDiv.cloneNode(true);
+
+	 		leftSideImages.removeChild(leftSideImages.lastChild);
+
+	 		rightSideDiv.appendChild(leftSideImages);
+
+
+	 	}
+	 	
+
+	 </script>
+
+</body>
+
+
+</html>
