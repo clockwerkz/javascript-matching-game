@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset = "utf-8">
+
+	<title>Javascript Matching Game Part 1</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+
+	<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+	<header>
+
+		<h1>Matching Game</h1>
+
+		<p>Click on the extra smiling face on the left side.</p>
+
+	</header>
+
+	<main>
+
+		<div id="leftSide" class="gameBoard"></div>
+
+		<div id="rightSide" class="gameBoard"></div>
+
+	</main>
+
+	 <script type="text/javascript">
+	 	var leftSideDiv = document.getElementById("leftSide");
+
+	 	var imgElement = document.createElement("img");
+
+	 	var xPos, yPos;
+
+	 	var imgArr = [];
+
+	 	for (i=0; i<5; i++)
+	 	{
+	 		imgArr[i] = document.createElement("img");
+
+	 		imgArr[i].src = "assets/img/smile.png"
+
+	 		xPos = Math.floor(Math.random()*400);
+	 		yPos = Math.floor(Math.random()*400);
+
+	 		imgArr[i].style.left = xPos+"px";
+	 		imgArr[i].style.top = yPos+"px";
+
+	 		leftSideDiv.appendChild(imgArr[i]);
+
+	 	}
+	 	
+
+	 </script>
+
+</body>
+
+
+</html>
