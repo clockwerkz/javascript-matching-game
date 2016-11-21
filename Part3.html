@@ -4,11 +4,34 @@
 
 	<meta charset = "utf-8">
 
-	<title>Javascript Matching Game Part 1</title>
+	<title>Javascript Matching Game Part 3</title>
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+	<style type="text/css">
 
-	<link rel="stylesheet" href="assets/css/style.css">
+		body {
+			font-family: Helvetica, Tahoma, sans-serif;
+		}
+
+		img {
+			position: absolute;
+		}
+
+		header {
+			padding: 0 0 0 15px;
+		}
+
+		.gameBoard {
+			position: absolute;
+			width: 500px;
+			height: 500px;
+		}
+
+		#rightSide {
+			left: 501px;
+			border-left: 1px solid black;
+		}
+
+	</style>
 
 </head>
 
@@ -48,7 +71,7 @@
 	 		{
 		 		image = document.createElement("img");
 
-		 		image.src = "assets/img/smile.png"
+		 		image.src = "https://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png";
 
 	 			xPos = Math.floor(Math.random()*400);
 	 			yPos = Math.floor(Math.random()*400);
